@@ -9,6 +9,7 @@
 }
 body{
     background-color: rgb(44, 44, 92);
+    overflow: hidden;
 
     main{
         h1{
