@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+
+}
+body{
+    background-color: rgb(44, 44, 92);
+
+    main{
+        h1{
+            color:white;
+            text-align: center;
+            margin: 10px;
+        }
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-image: 
+        repeating-linear-gradient(
+            to right,
+            transparent 0 50px, #fff1 50px 51px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0 50px, #fff1 50px 51px
+        );
+        .colorselect{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.515);
+            background-color: white;
+            display: flex;
+            width: max-content;
+            border-radius: 40px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 5px;
+            margin: 10px;
+            input{
+                border: none;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+            }
+            input::-webkit-color-swatch-wrapper{
+                padding: 0;
+            }
+            input::-webkit-color-swatch{
+                border-radius: 50%;
+            }
+            span{
+                padding: 0 8px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        .list{
+            .note{
+                border-top: 30px solid #f2bb3a;
+                border-radius: 10px;
+                position: absolute;
+                color: white;
+                .closebtn{
+                    position: absolute;
+                    right: 0;
+                    mix-blend-mode:difference;
+                    top: -1.8rem;
+                    padding: 2px 15px;
+                    font-size: 20px;
+                    /* color: black; */
+                }
+                top:80px;
+                left: 20px;
+            }
+        }
+    }
+
+
+
+}
+textarea{
+    all: unset;
+    background-color: rgb(38, 37, 37);
+    width: max-content;
+    height: 20vh;
+    cursor:text;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.515);
+}
