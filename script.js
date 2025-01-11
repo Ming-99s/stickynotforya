@@ -32,8 +32,11 @@ let objectplace = {
     x:null,
     y:null
 }
+document.addEventListener("tochstart",(event) => startOn(event));
+document.addEventListener("mousedown",(event) => startOn(event));
 
-document.addEventListener("mousedown",(event)=>{
+function startOn(event){
+
     if(event.target.classList.contains('note')){
         cursor={
             x:event.clientX,
@@ -47,9 +50,11 @@ document.addEventListener("mousedown",(event)=>{
         objectplace.where.style.cursor = 'grab';  
 
     }
-})
+}
+document.addEventListener("touchmove",(event) =>letmove(event));
+document.addEventListener("mousemove",(event) =>letmove(event));
 
-document.addEventListener("mousemove",event=>{
+function letmove(event){
     let currentcursor = {
         x:event.clientX,
         y:event.clientY
@@ -61,12 +66,13 @@ document.addEventListener("mousemove",event=>{
 
     objectplace.where.style.left = (objectplace.x + distance.x) +'px';
     objectplace.where.style.top = (objectplace.y + distance.y)+ 'px';
-});
+}
 
-document.addEventListener("mouseup",event=>{
+
+document.addEventListener("touchend",(event) =>EndUp(event));
+document.addEventListener("mouseup",(event) =>EndUp(event));
+
+function EndUp(event){
     objectplace.where.style.cursor = 'default';
     objectplace.where= null;
-
-
-})
 
